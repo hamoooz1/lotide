@@ -4,7 +4,8 @@ const tail = function(array) {
   for (let i = 1; i < array.length; i++) {
     tails.push(array[i]);
   }
-  console.log(tails);
+ 
+  return tails.length;
 };
 
 
@@ -19,6 +20,6 @@ const assertEqual = function(actual, expected) {
 
 const result = ["Hello", "Lighthouse", "Labs"];
 
-tail(result);
+// assertEqual(tail(result), 2)
 
-assertEqual(result.length, 3);
+module.exports = tail;
